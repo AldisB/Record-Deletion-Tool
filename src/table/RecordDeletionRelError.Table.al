@@ -1,4 +1,4 @@
-table 50001 "Record Deletion Rel. Error"
+table 94005 "Record Deletion Rel. Error"
 {
     Caption = 'Record Deletion Rel. Error';
     DataClassification = CustomerContent;

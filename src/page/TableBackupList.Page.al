@@ -1,4 +1,4 @@
-page 50002 "Table Backup List"
+page 94009 "Table Backup List"
 {
     ApplicationArea = All;
     Caption = 'Table Backups';

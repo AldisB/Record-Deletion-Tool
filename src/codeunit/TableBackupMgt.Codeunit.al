@@ -1,4 +1,4 @@
-codeunit 50001 "Table Backup Mgt."
+codeunit 94003 "Table Backup Mgt."
 {
     Permissions = tabledata "Table Backup" = RIMD;
 

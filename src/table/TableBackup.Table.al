@@ -1,4 +1,4 @@
-table 50002 "Table Backup"
+table 94006 "Table Backup"
 {
     Caption = 'Table Backup';
     DataClassification = SystemMetadata;

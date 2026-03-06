@@ -1,4 +1,4 @@
-enum 50001 "Backup Type"
+enum 94001 "Backup Type"
 {
     Extensible = true;
     // 0 reserved for blank

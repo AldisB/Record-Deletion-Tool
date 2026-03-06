@@ -1,4 +1,4 @@
-codeunit 50000 "Record Deletion Mgt."
+codeunit 94002 "Record Deletion Mgt."
 {
     Permissions = tabledata "Record Deletion" = RIMD,
                   tabledata "Record Deletion Rel. Error" = RIMD,
@@ -8,9 +8,10 @@ codeunit 50000 "Record Deletion Mgt."
                   tabledata "Detailed Cust. Ledg. Entry" = IMD,
                   tabledata "Detailed Vendor Ledg. Entry" = IMD,
                   tabledata "Dimension Set Entry" = IMD,
+                  tabledata "Dimension Set Tree Node" = IMD,
                   //   Tabledata 3905 = IMD,
                   tabledata "FA Ledger Entry" = IMD,
-tabledata "G/L Entry" = IMD,
+                  tabledata "G/L Entry" = IMD,
                   tabledata "G/L Entry - VAT Entry Link" = IMD,
                   tabledata "G/L Register" = IMD,
                   tabledata "Gen. Journal Line" = IMD,
@@ -41,7 +42,10 @@ tabledata "G/L Entry" = IMD,
                   tabledata "Sales Shipment Line" = IMD,
                   tabledata "Value Entry" = IMD,
                   tabledata "VAT Entry" = IMD,
-                  tabledata "Vendor Ledger Entry" = IMD;
+                  tabledata "Vendor Ledger Entry" = IMD,
+                  tabledata "Item Register" = IMD,
+                  tabledata "Res. Ledger Entry" = IMD;
+
     procedure InsertUpdateTables()
     var
         AllObjWithCaption: Record AllObjWithCaption;

@@ -1,4 +1,4 @@
-enum 50000 "Backup Operation Type"
+enum 94000 "Backup Operation Type"
 {
     Extensible = true;
 

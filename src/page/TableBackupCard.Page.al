@@ -1,4 +1,4 @@
-page 50003 "Table Backup Card"
+page 94010 "Table Backup Card"
 {
     ApplicationArea = All;
     Caption = 'Table Backup Card';

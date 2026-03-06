@@ -1,4 +1,4 @@
-table 50000 "Record Deletion"
+table 94004 "Record Deletion"
 {
     Caption = 'Record Deletion';
     DataClassification = CustomerContent;

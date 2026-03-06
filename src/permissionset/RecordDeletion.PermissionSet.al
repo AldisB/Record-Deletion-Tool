@@ -1,4 +1,4 @@
-permissionset 50000 "Record Deletion"
+permissionset 94012 "Record Deletion"
 {
     Assignable = true;
     Caption = 'Record Deletion', Locked = true;

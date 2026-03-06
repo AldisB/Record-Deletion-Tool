@@ -1,4 +1,4 @@
-page 50000 "Record Deletion"
+page 94007 "Record Deletion"
 {
     ApplicationArea = All;
     Caption = 'Record Deletion';

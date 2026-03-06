@@ -1,4 +1,4 @@
-page 50004 "Create Table Backup"
+page 94011 "Create Table Backup"
 {
     ApplicationArea = All;
     Caption = 'Create Table Backup';

@@ -7,7 +7,7 @@ App/.vscode
 .altemplates/
 .alpackages/
 # Project Output
-App/*.app
+*.app
 
 ### Windows ###
 # Windows thumbnail cache files

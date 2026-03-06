@@ -1,4 +1,4 @@
-page 50001 "Record Deletion Rel. Error"
+page 94008 "Record Deletion Rel. Error"
 {
     ApplicationArea = All;
     Caption = 'Record Deletion Rel. Error';
