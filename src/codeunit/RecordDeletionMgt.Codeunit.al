@@ -44,7 +44,13 @@ codeunit 94002 "Record Deletion Mgt."
                   tabledata "VAT Entry" = IMD,
                   tabledata "Vendor Ledger Entry" = IMD,
                   tabledata "Item Register" = IMD,
-                  tabledata "Res. Ledger Entry" = IMD;
+                  tabledata "Res. Ledger Entry" = IMD,
+                  tabledata "Approval Entry" = IMD;
+
+    trigger OnRun()
+    begin
+        PerformDeletion(false);
+    end;
 
     procedure InsertUpdateTables()
     var
@@ -522,12 +528,14 @@ codeunit 94002 "Record Deletion Mgt."
         UpdateDialog: Dialog;
         DeletingRecordsTxt: Label 'Deleting Records!\Table: #1#######', Comment = '%1 = Table ID';
     begin
-        UpdateDialog.Open(DeletingRecordsTxt);
+        if GuiAllowed() then
+            UpdateDialog.Open(DeletingRecordsTxt);
 
         if RecordDeletion.FindSet() then
             repeat
                 if RecordDeletion."Delete Records" then begin
-                    UpdateDialog.Update(1, Format(RecordDeletion."Table ID"));
+                    if GuiAllowed() then
+                        UpdateDialog.Update(1, Format(RecordDeletion."Table ID"));
                     RecordRef.Open(RecordDeletion."Table ID");
                     RecordRef.DeleteAll(RunTrigger);
                     RecordRef.Close();
@@ -535,8 +543,8 @@ codeunit 94002 "Record Deletion Mgt."
                     RecordDeletionRelError.DeleteAll(true);
                 end;
             until RecordDeletion.Next() = 0;
-
-        UpdateDialog.Close();
+        if GuiAllowed() then
+            UpdateDialog.Close();
     end;
 
     procedure CheckTableRelations()
