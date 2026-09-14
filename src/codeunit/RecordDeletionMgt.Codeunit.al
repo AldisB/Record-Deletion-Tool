@@ -527,6 +527,7 @@ codeunit 94002 "Record Deletion Mgt."
         RecordRef: RecordRef;
         UpdateDialog: Dialog;
         DeletingRecordsTxt: Label 'Deleting Records!\Table: #1#######', Comment = '%1 = Table ID';
+        i: Integer;
     begin
         if GuiAllowed() then
             UpdateDialog.Open(DeletingRecordsTxt);
@@ -541,6 +542,9 @@ codeunit 94002 "Record Deletion Mgt."
                     RecordRef.Close();
                     RecordDeletionRelError.SetRange("Table ID", RecordDeletion."Table ID");
                     RecordDeletionRelError.DeleteAll(true);
+                    i += 1;
+                    if i mod 10 = 0 then
+                        commit();
                 end;
             until RecordDeletion.Next() = 0;
         if GuiAllowed() then
