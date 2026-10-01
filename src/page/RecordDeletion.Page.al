@@ -170,6 +170,34 @@ page 94007 "Record Deletion"
                     Page.Run(Page::"Table Backup List");
                 end;
             }
+            action(RemoveDeleteRecrodsMark)
+            {
+                CaptionML = ENU = 'Remove Delete Records Mark';
+                Image = Delete;
+                Promoted = true;
+                PromotedCategory = Category6;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                ToolTip = 'Executes the RemoveDeleteRecrodsMark action.';
+                trigger OnAction()
+                begin
+                    Rec.ModifyAll("Delete Records", false);
+                end;
+            }
+            action(SetDeleteRecordsMark)
+            {
+                CaptionML = ENU = 'Set Delete Records Mark';
+                Image = Edit;
+                Promoted = true;
+                PromotedCategory = Category6;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                ToolTip = 'Executes the SetDeleteRecordsMark action.';
+                trigger OnAction()
+                begin
+                    Rec.ModifyAll("Delete Records", true);
+                end;
+            }
         }
     }
     var
